@@ -44,8 +44,12 @@ function mergeSort(array) {
     const left = array.slice(0, mid);
     const right = array.slice(mid);
 
-    // Recursively sort both halves and merge them
-    return merge(mergeSort(left), mergeSort(right));
+    // Recursively sort both halves
+    const sortedLeft = mergeSort(left)
+    const sortedRight = mergeSort(right)
+
+    // Merge left and right sorted arrays
+    return merge(sortedLeft, sortedRight);
 }
 
 // Example usage
