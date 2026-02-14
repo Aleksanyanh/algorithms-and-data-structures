@@ -4,10 +4,10 @@ function addDigits(num) {
     let res = 0;
 
     while (num > 0) {
-        let reminder = num % 10;
-        res += reminder;
+        let remainder = num % 10;
+        res += remainder;
 
-        num -= reminder;
+        num -= remainder;
         num /= 10;
     }
 
